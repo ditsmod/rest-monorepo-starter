@@ -1,6 +1,6 @@
 import { HTTP_BODY } from '@ditsmod/body-parser';
-import { controller, inject, Res } from '@ditsmod/core';
-import { route } from '@ditsmod/routing';
+import { inject } from '@ditsmod/core';
+import { controller, route, Res } from '@ditsmod/rest';
 
 @controller()
 export class InjScopedController {

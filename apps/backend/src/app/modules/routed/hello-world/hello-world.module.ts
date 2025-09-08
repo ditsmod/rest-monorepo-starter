@@ -2,6 +2,8 @@ import { featureModule } from '@ditsmod/core';
 
 import { InjScopedController } from './default.controller.js';
 import { CtxScopedController } from './singleton.controller.js';
+import { initRest } from '@ditsmod/rest';
 
-@featureModule({ controllers: [InjScopedController, CtxScopedController] })
+@initRest({ controllers: [InjScopedController, CtxScopedController] })
+@featureModule()
 export class HelloWorldModule {}

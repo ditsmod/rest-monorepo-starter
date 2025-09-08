@@ -1,13 +1,14 @@
 import { Providers, rootModule } from '@ditsmod/core';
-import { RoutingModule } from '@ditsmod/routing';
+import { initRest } from '@ditsmod/rest';
 import { BodyParserModule } from '@ditsmod/body-parser';
 
 import { HelloWorldModule } from './modules/routed/hello-world/hello-world.module.js';
 
-@rootModule({
+@initRest({
   providersPerApp: new Providers().useLogConfig({ level: 'info' }),
   appends: [HelloWorldModule],
-  imports: [RoutingModule, BodyParserModule],
-  exports: [RoutingModule, BodyParserModule],
+  imports: [BodyParserModule],
+  exports: [BodyParserModule],
 })
+@rootModule()
 export class AppModule {}

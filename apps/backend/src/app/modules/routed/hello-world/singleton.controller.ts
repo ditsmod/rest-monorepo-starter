@@ -1,5 +1,4 @@
-import { controller, RequestContext } from '@ditsmod/core';
-import { route } from '@ditsmod/routing';
+import { controller, route, RequestContext } from '@ditsmod/rest';
 
 @controller({ scope: 'ctx' })
 export class CtxScopedController {
