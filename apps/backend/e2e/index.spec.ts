@@ -1,7 +1,7 @@
 import request from 'supertest';
 import { TestApplication } from '@ditsmod/testing';
 import { HttpServer } from '@ditsmod/core';
-import { afterAll, beforeAll, describe, it, vi } from 'vitest';
+import { jest } from '@jest/globals';
 
 import { AppModule } from '#app/app.module.js';
 
@@ -10,7 +10,7 @@ describe('Integration tests for HelloWorldController', () => {
   let testAgent: ReturnType<typeof request>;
 
   beforeAll(async () => {
-    vi.restoreAllMocks();
+    jest.restoreAllMocks();
     server = await TestApplication.createTestApp(AppModule, { path: 'api' }).getServer();
     testAgent = request(server);
   });
