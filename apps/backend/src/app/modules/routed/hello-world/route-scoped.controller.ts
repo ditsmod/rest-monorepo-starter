@@ -1,15 +1,15 @@
 import { controller, route, RequestContext } from '@ditsmod/rest';
 
-@controller({ scope: 'ctx' })
-export class CtxScopedController {
+@controller({ scope: 'route' })
+export class RouteScopedController {
   @route('GET', 'hello2')
-  tellHello(ctx: RequestContext) {
-    ctx.send('Hello World!');
+  tellHello() {
+    return 'Hello World!';
   }
 
   @route('POST', 'body2')
   postHello(ctx: RequestContext) {
-    ctx.sendJson(ctx.body);
+    return ctx.body;
   }
 
   @route('GET', 'throw-error2')

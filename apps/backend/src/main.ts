@@ -1,4 +1,4 @@
-import { ServerOptions } from 'node:http';
+import type { ServerOptions } from 'node:http';
 import { RestApplication } from '@ditsmod/rest';
 
 import { AppModule } from './app/app.module.js';

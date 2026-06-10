@@ -1,7 +1,7 @@
 import { restModule } from '@ditsmod/rest';
 
-import { InjScopedController } from './default.controller.js';
-import { CtxScopedController } from './singleton.controller.js';
+import { RequestScopedController } from './request-scoped.controller.js';
+import { RouteScopedController } from './route-scoped.controller.js';
 
-@restModule({ controllers: [InjScopedController, CtxScopedController] })
+@restModule({ controllers: [RequestScopedController, RouteScopedController] })
 export class HelloWorldModule {}

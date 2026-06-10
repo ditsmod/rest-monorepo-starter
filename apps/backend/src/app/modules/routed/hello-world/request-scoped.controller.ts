@@ -1,17 +1,17 @@
 import { HTTP_BODY } from '@ditsmod/body-parser';
 import { ctx } from '@ditsmod/core';
-import { controller, route, Res } from '@ditsmod/rest';
+import { controller, route } from '@ditsmod/rest';
 
 @controller()
-export class InjScopedController {
+export class RequestScopedController {
   @route('GET', 'hello')
-  tellHello(res: Res) {
-    res.send('Hello World!');
+  tellHello() {
+    return 'Hello World!';
   }
 
   @route('POST', 'body')
-  postHello(res: Res, @ctx(HTTP_BODY) body: any) {
-    res.sendJson(body);
+  postHello(@ctx(HTTP_BODY) body: any) {
+    return body;
   }
 
   @route('GET', 'throw-error')
