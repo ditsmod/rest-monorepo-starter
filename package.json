@@ -15,6 +15,7 @@
     "build": "tsc -b apps/tsconfig.json",
     "watch": "npm run build -- --watch",
     "lint": "eslint .",
+    "setup:agents": "curl -fsSL https://raw.githubusercontent.com/ditsmod/agent-skills/main/AGENTS.md -o AGENTS.md",
     "clean": "rimraf apps/*/dist*"
   },
   "devDependencies": {

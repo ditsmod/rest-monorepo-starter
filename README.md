@@ -40,3 +40,29 @@ By default, the application works with `info` log level. You can change it in th
 npm run build
 npm run start-prod
 ```
+
+### Add `AGENTS.md` and `SKILL.md` for AI agents {#add-agent-skills}
+
+The file [AGENTS.md][1] is intended for AI agents and should be placed in the root directory of the repository. This file will be taken into account by the AI agent every time you interact with the agent. To copy the latest version of `AGENTS.md`, run the following command:
+
+```bash
+cd my-app # Go to starter repository
+npm run setup:agents
+```
+
+Additionally, you can install [AI agent skills][2] to help them better understand the specifics of Ditsmod applications:
+
+```bash
+npx skills add ditsmod/agent-skills
+```
+
+This command will let you choose from all available skills. If you already know which skill you need, you can install it like this:
+
+```bash
+npx skills add ditsmod/agent-skills --skill ditsmod-module-composition
+```
+
+AI agent skills are only loaded when needed, when you ask something relevant to them.
+
+[1]: https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md
+[2]: https://agentskills.io/home
