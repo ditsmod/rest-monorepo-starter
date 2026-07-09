@@ -6,7 +6,7 @@
   "description": "Ditsmod application",
   "version": "1.0.0",
   "engines": {
-    "node": ">= 18.14.0"
+    "node": ">= 24.0.0"
   },
   "directories": {
     "lib": "src"
@@ -15,7 +15,7 @@
     "build": "tsc -b tsconfig.build.json",
     "start": "npm run build && node --enable-source-maps dist/main.js",
     "node-watch": "node --watch --enable-source-maps dist/main.js",
-    "start:dev": "run-p 'build -- --watch' node-watch",
+    "start:dev": "ditsmod start",
     "build-test": "tsc -b tsconfig.e2e.json --watch",
     "esm-jest": "node --experimental-vm-modules --no-warnings=ExperimentalWarning --enable-source-maps ../../node_modules/jest/bin/jest.js",
     "test": "tsc -b tsconfig.e2e.json && npm run esm-jest",
@@ -34,6 +34,7 @@
     "dotenv": "^16.6.1"
   },
   "devDependencies": {
+    "@ditsmod/cli": "^3.0.2-next.13",
     "@ditsmod/rest-testing": "^3.0.0-next.13",
     "@types/supertest": "^6.0.3",
     "supertest": "^6.3.4"
