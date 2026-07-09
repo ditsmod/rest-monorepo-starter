@@ -46,7 +46,6 @@ npm run start-prod
 The file [AGENTS.md][1] is intended for AI agents and should be placed in the root directory of the repository. This file will be taken into account by the AI agent every time you interact with the agent. To copy the latest version of `AGENTS.md`, run the following command:
 
 ```bash
-cd my-app # Go to starter repository
 npm run setup:agents
 ```
 
