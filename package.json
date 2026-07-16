@@ -19,16 +19,17 @@
     "clean": "rimraf apps/*/dist*"
   },
   "devDependencies": {
+    "@ditsmod/cli": "^3.0.0-next.15",
     "@eslint/js": "^10.0.1",
     "@types/eslint__js": "^8.42.3",
     "@types/jest": "^30.0.0",
     "@types/node": "^18.19.130",
-    "eslint": "^10.6.0",
+    "eslint": "^10.7.0",
     "jest": "^30.4.2",
     "prettier": "^2.8.8",
     "rimraf": "^4.4.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.62.1"
+    "typescript-eslint": "^8.64.0"
   }
 }
